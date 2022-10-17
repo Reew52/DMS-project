@@ -26,7 +26,7 @@ use App\Http\Controllers\Admin\IVDetailController;
 |
 */
 route::get('/', function(){
-    echo 'trang view';
+    return view('admin.index');
 });
 
 // Admin
