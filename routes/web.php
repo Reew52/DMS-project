@@ -25,9 +25,7 @@ use App\Http\Controllers\Admin\IVDetailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-route::get('/', function(){
-    return view('admin.index');
-});
+Route::get('/', [MyController::class, 'index'])->name('index');
 
 // Admin
 Route::prefix('admin')->name('admin.')->group(function(){
