@@ -45,8 +45,8 @@
 
             <label for="">Status: </label>
             <select name="user_status" name="form-control">
-                <option value="0" {{$userDetail->user_status ?'selected':false?'selected':false}}>Inactive</option>
-                <option value="1" {{$userDetail->user_status ?'selected':false?'selected':false}}>Active</option>
+                <option value="0" {{$userDetail->user_status ?'(selected)':false?'(selected)':false}}>Inactive</option>
+                <option value="1" {{$userDetail->user_status ?'(selected)':false?'(selected)':false}}>Active</option>
             </select>
             @error('user_status')
                 <span style="color: red">{{$message}} </span>
