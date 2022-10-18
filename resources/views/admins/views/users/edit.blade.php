@@ -35,7 +35,7 @@
                 <option value="0">Choose role</option>
                 @if (!empty($allUserRole))
                     @foreach ($allUserRole as $item)
-                    <option value="{{$item->ur_id}}" {{old('ur_id')==$item->ur_id || $userDetail->ur_id ?'selected':false}}> {{$item->ur_name}}</option>
+                    <option value="{{$item->ur_id}}" {{$userDetail->ur_id ?'selected':false}}> {{$item->ur_name}}</option>
                     @endforeach
                 @endif
             </select>
@@ -45,8 +45,8 @@
 
             <label for="">Status: </label>
             <select name="user_status" name="form-control">
-                <option value="0" {{old('user_status')==0 || $userDetail->user_status ?'selected':false?'selected':false}}>Inactive</option>
-                <option value="1" {{old('user_status')==1 || $userDetail->user_status ?'selected':false?'selected':false}}>Active</option>
+                <option value="0" {{$userDetail->user_status ?'selected':false?'selected':false}}>Inactive</option>
+                <option value="1" {{$userDetail->user_status ?'selected':false?'selected':false}}>Active</option>
             </select>
             @error('user_status')
                 <span style="color: red">{{$message}} </span>
